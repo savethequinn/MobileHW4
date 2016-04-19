@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jdo589.welcometout.buildingInfo"
+    android:background="#FFFFFF">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Building Name"
+            android:id="@+id/buildingName"
+            android:layout_gravity="center_horizontal|top"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimary" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/buildingPic"
+                    android:src="@drawable/defimg"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:id="@+id/buildingAddress"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Blurb"
+                    android:id="@+id/buildingInfo"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fun Fact"
+                    android:id="@+id/buildingFact"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="jdo589.welcometout.WelcomeVideo">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <VideoView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeVideo"
+        android:layout_gravity="center"
+        android:padding="10dp" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <LinearLayout
+        android:id="@+id/fullscreen_content_controls"
+        style="?metaButtonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/black_overlay"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <Button
+            style="?metaButtonBarButtonStyle"
+            android:id="@+id/buttonPlayVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</FrameLayout>

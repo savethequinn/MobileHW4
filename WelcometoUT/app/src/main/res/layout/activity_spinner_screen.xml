@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jdo589.welcometout.SpinnerScreen">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Welcome to UT"
+            android:id="@+id/pageTitle"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose an option from the menu below. You will find information about our most notable facilities on campus."
+            android:id="@+id/instructionsView"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp" />
+
+        <fragment
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:name="jdo589.welcometout.buildingInfo"
+            android:id="@+id/fragmentContainer"
+            android:layout_gravity="center_horizontal"
+            tools:layout="@layout/fragment_building_info" />
+
+    </LinearLayout>
+
+</RelativeLayout>
