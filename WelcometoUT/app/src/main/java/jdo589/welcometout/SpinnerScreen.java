@@ -60,19 +60,41 @@ public class SpinnerScreen extends AppCompatActivity {
 
                 if (arraySpinner[position].equalsIgnoreCase("Fight Song")) {
                     //play music
-                    play();
-                }
-
-                else if (arraySpinner[position].equalsIgnoreCase("Introductory Video")){
                     if (mySound == null){
-                        //we are okay
+                        play();
                     }
                     // stop the music
                     else if (mySound.isPlaying()){
                         stop();
                     }
+                }
+
+                else if (arraySpinner[position].equalsIgnoreCase("Introductory Video")){
+                    // stop the music
+                    if (mySound == null){
+
+                    }
+                    else if (mySound.isPlaying()){
+                        mySound.stop();
+                        mySound = null;
+                    }
+                    else{
+                        mySound = null;
+                    }
                     Intent intent = new Intent(SpinnerScreen.this,WelcomeVideo.class);
                     startActivity(intent);
+                }
+                else{
+                    if (mySound == null){
+
+                    }
+                    else if (mySound.isPlaying()){
+                        mySound.stop();
+                        mySound = null;
+                    }
+                    else{
+                        mySound = null;
+                    }
                 }
             }
 
@@ -85,6 +107,7 @@ public class SpinnerScreen extends AppCompatActivity {
         });
 
     }
+
 
     // updates the global variables with the correct information depending on the spinner choice
     public void updateRes(int position) {
@@ -196,8 +219,8 @@ public class SpinnerScreen extends AppCompatActivity {
             mySound = MediaPlayer.create(this, R.raw.fightsong);
             mySound.start();
         }
-        else if (!mySound.isPlaying()){
-            mySound.seekTo(paused);
+        else{
+            mySound.seekTo(0);
             mySound.start();
         }
     }
